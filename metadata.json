@@ -1,0 +1,6 @@
+{
+  "name": "AssetVault",
+  "description": "React 19 + TypeScript + Tailwind CSS 4 frontend showcase for institutional Real-World Asset (RWA) tokenization concepts.",
+  "version": "0.1.0",
+  "license": "MIT"
+}
