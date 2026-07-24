@@ -69,6 +69,7 @@ The `esbuild <= 0.24.2` advisory (GHSA-67mh-4wv8-2f99) is flagged transitively v
 
 ## Roadmap
 
+- [x] Code-split heavy views with React.lazy (845kB to 361kB initial bundle)
 - [ ] Add integration tests for the buy-token and tokenize flows
 - [ ] Replace expiring Google-hosted asset images with local or CDN-hosted assets
 - [ ] Wire up a real Gemini API integration for news sentiment (currently a static mock)
