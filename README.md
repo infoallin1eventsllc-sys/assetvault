@@ -1,5 +1,7 @@
 # AssetVault
 
+**[Live demo →](https://assetvault-otis.netlify.app)**
+
 **Institutional Real-World Asset (RWA) tokenization dashboard — a React 19 + TypeScript frontend showcase demonstrating modern web development patterns.**
 
 A design-forward interface that visualizes how fractional real-world assets (real estate, private equity, infrastructure) could be tokenized, tracked, and traded on an institutional platform. Built to demonstrate frontend engineering skills across modern React, TypeScript, and animation tooling — not a live financial product.
