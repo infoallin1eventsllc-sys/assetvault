@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import Sidebar from './components/Sidebar';
 import TopBar from './components/TopBar';
 import OverviewView from './components/OverviewView';
-import TokenizeView from './components/TokenizeView';
-import AnalyticsView from './components/AnalyticsView';
-import PortfolioView from './components/PortfolioView';
-import MirroredModelView from './components/MirroredModelView';
-import TreasuryView from './components/TreasuryView';
+const TokenizeView = lazy(() => import('./components/TokenizeView'));
+const AnalyticsView = lazy(() => import('./components/AnalyticsView'));
+const PortfolioView = lazy(() => import('./components/PortfolioView'));
+const MirroredModelView = lazy(() => import('./components/MirroredModelView'));
+const TreasuryView = lazy(() => import('./components/TreasuryView'));
 import { INITIAL_ASSETS, INITIAL_NEWS, INITIAL_PORTFOLIO } from './mockData';
 import { Asset, NewsItem, PortfolioItem } from './types';
 import { LayoutGrid, Coins, TrendingUp, Briefcase, X, ShieldAlert, ShieldCheck, Layers } from 'lucide-react';
@@ -137,7 +137,9 @@ export default function App() {
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.18, ease: 'easeOut' }}
             >
-              {renderTabContent()}
+              <Suspense fallback={<div className="text-white/40 text-xs uppercase tracking-widest p-8">Loading module…</div>}>
+                {renderTabContent()}
+              </Suspense>
             </motion.div>
           </AnimatePresence>
         </main>
